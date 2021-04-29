@@ -9,3 +9,6 @@ host mailserver.com
 port 25
 from "php@email.com"
 logfile /folder/msmtp.log
+
+# source 
+https://owendavies.net/articles/setting-up-msmtp/
