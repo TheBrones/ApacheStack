@@ -1,4 +1,4 @@
-# apachestack
+# Apachestack
  PHP-Apache with some mods to make a multi-puprose webserver in a single container.
 
 Added components over PHP and Apache:
@@ -24,7 +24,7 @@ from "php@email.com"
 logfile /folder/msmtp.log
 ```
 
-# sources
+# Sources
 https://hub.docker.com/layers/php/library/php/apache/images/sha256-4807131aaf46a48c03548e4284456c08c3e0c2db40aea2299958cf54a02d1136?context=explore
 https://owendavies.net/articles/setting-up-msmtp/
 https://github.com/mlocati/docker-php-extension-installer
