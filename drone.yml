@@ -1,0 +1,25 @@
+name: default
+
+kind: pipeline
+type: docker
+
+steps:
+- name: backend
+  image: golang
+  commands:
+    - go get
+    - go build
+    - go test
+
+- name: publish
+  image: plugins/docker
+  settings:
+    repo: TheBrones/apachestack
+    #tags: [ 1, 1.1, latest ]
+    registry: github.com
+
+#- name: notify
+#  image: plugins/slack
+#  settings:
+#    channel: developers
+#    username: drone
