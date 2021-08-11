@@ -8,7 +8,9 @@ steps:
   settings:
 #    username: kevinbacon
 #    password: pa55word
-    repo: thebrones/apachestack
+    token:
+      from_secret: key
+    repo: https://hub.docker.com/r/thebrones/apachestack
     dockerfile: Dockerfile
     registry: github.com
 
