@@ -9,7 +9,7 @@ steps:
     repo: thebrones/apachestack:dev
     tags: 
     - dev
-    - droneci
+    #- droneci
   when:
     branch: [ dev ]
     event: [ push ]
