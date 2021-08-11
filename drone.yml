@@ -8,7 +8,9 @@ steps:
       settings:
         secrets: [ DOCKERUSERNAME, DOCKERPASSWORD ]
         repo: thebrones/apachestack:dev
-        tags: 'dev'
+        tags: 
+        - dev
+        - droneci
       when:
         branch: [ dev ]
         event: [ push ]
