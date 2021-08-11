@@ -10,13 +10,14 @@ steps:
 #    password: pa55word
     repo: thebrones/apachestack
     dockerfile: Dockerfile
-
-- name: publish
-  image: plugins/docker
-  settings:
-    repo: thebrones/apachestack
-    #tags: [ 1, 1.1, latest ]
     registry: github.com
+
+#- name: publish
+#  image: plugins/docker
+#  settings:
+#    repo: thebrones/apachestack
+    #tags: [ 1, 1.1, latest ]
+    
 
 #- name: notify
 #  image: plugins/slack
