@@ -8,13 +8,13 @@ steps:
   settings:
 #    username: kevinbacon
 #    password: pa55word
-    repo: TheBrones/apachestack
+    repo: thebrones/apachestack
     dockerfile: Dockerfile
 
 - name: publish
   image: plugins/docker
   settings:
-    repo: TheBrones/apachestack
+    repo: thebrones/apachestack
     #tags: [ 1, 1.1, latest ]
     registry: github.com
 
