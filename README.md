@@ -6,6 +6,14 @@ Added components over PHP and Apache:
   - gd
   - mysqli
 
+Disabled at this time (but will work):
+  - gmagick
+  - ssh2
+  - exif
+  - imagick
+  - mbstring
+  - sockets
+
 Don't forget to add a file in the mount /etc/msmtprc. 
 This file configures the msmtp service to send outbound mail.
 ```conf
