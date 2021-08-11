@@ -5,15 +5,15 @@ steps:
 - name: docker
   image: plugins/docker
   settings:
-    #secrets: [ DOCKERUSERNAME, DOCKERPASSWORD ]
     username: 
       from_secret: DOCKERUSERNAME
     password: 
       from_secret: DOCKERPASSWORD
     repo: thebrones/apachestack
-    tags: 
-    - dev
-    #- droneci
-  when:
-    branch: [ dev ]
-    event: [ push ]
+    #tags: 
+    #- dev
+    #- latest
+    auto_tag: true
+#  when:
+#    branch: [ dev ]
+#    event: [ push ]

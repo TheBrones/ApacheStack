@@ -5,6 +5,8 @@ Added components over PHP and Apache:
   - msmtp (for sending mail)
   - gd
   - mysqli
+
+Disabled at this time (but will work):
   - gmagick
   - ssh2
   - exif
