@@ -13,8 +13,9 @@ steps:
   - publish:
       secrets: [ DOCKERUSERNAME, DOCKERPASSWORD ]
       image: plugins/docker
-      repo: thebrones/apachestack
-      tags: dev
+      settings:
+        tags: dev
+        repo: thebrones/apachestack
       when:
         branch: [ dev ]
         event: [ push ]
