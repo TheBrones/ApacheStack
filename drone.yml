@@ -13,7 +13,7 @@ steps:
     #auto_tag: true Not working
     tags: 
     - dev
-    - latest
+    - testing
   when:
-    branch: [ dev ]
+    branch: [ testing ]
     event: [ push ]
