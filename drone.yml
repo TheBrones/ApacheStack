@@ -3,7 +3,7 @@ name: default
 kind: pipeline
 type: docker
 steps:
-  - publish:
+  - publish: publish
       image: plugins/docker
       settings:
         secrets: [ DOCKERUSERNAME, DOCKERPASSWORD ]
