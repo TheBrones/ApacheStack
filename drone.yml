@@ -14,7 +14,8 @@ steps:
       secrets: [ DOCKERUSERNAME, DOCKERPASSWORD ]
       image: plugins/docker
       settings:
-        tags: dev
+       # tags: dev
+        auto_tag: true
         repo: thebrones/apachestack
       when:
         branch: [ dev ]
