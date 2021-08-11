@@ -7,7 +7,7 @@ steps:
       image: plugins/docker
       settings:
         secrets: [ DOCKERUSERNAME, DOCKERPASSWORD ]
-        repo: thebrones/apachestack
+        repo: thebrones/apachestack:dev
         tags: 'dev'
       when:
         branch: [ dev ]
