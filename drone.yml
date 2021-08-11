@@ -3,13 +3,13 @@ kind: pipeline
 type: docker
 steps:
 - name: docker
-    image: plugins/docker
-    settings:
-      secrets: [ DOCKERUSERNAME, DOCKERPASSWORD ]
-      repo: thebrones/apachestack:dev
-      tags: 
-      - dev
-      - droneci
-    when:
-      branch: [ dev ]
-      event: [ push ]
+  image: plugins/docker
+  settings:
+    secrets: [ DOCKERUSERNAME, DOCKERPASSWORD ]
+    repo: thebrones/apachestack:dev
+    tags: 
+    - dev
+    - droneci
+  when:
+    branch: [ dev ]
+    event: [ push ]
