@@ -7,8 +7,8 @@ steps:
       image: plugins/docker
       settings:
         secrets: [ DOCKERUSERNAME, DOCKERPASSWORD ]
-        repo: https://hub.docker.com/r/thebrones/apachestack
-        tags: dev
+        repo: thebrones/apachestack
+        tags: 'dev'
       when:
         branch: [ dev ]
         event: [ push ]
