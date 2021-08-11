@@ -6,8 +6,10 @@ steps:
   image: plugins/docker
   settings:
     #secrets: [ DOCKERUSERNAME, DOCKERPASSWORD ]
-    username: DOCKERUSERNAME
-    password: DOCKERPASSWORD
+    username: 
+      from_secret: DOCKERUSERNAME
+    password: 
+      from_secret: DOCKERPASSWORD
     repo: thebrones/apachestack
     tags: 
     - dev
