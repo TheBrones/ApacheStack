@@ -6,7 +6,7 @@ steps:
   image: plugins/docker
   settings:
     secrets: [ DOCKERUSERNAME, DOCKERPASSWORD ]
-    repo: thebrones/apachestack:dev
+    repo: thebrones/apachestack
     tags: 
     - dev
     #- droneci
