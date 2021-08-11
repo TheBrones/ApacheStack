@@ -10,9 +10,9 @@ steps:
     password: 
       from_secret: DOCKERPASSWORD
     repo: thebrones/apachestack
-    auto_tag: true
-    #tags: 
-    #- dev
+    #auto_tag: true
+    tags: 
+    - dev
     #- latest
   when:
     branch: [ dev ]
