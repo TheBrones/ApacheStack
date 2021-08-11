@@ -3,26 +3,18 @@ name: default
 kind: pipeline
 type: docker
 steps:
-- name: docker  
-  image: plugins/docker
-  settings:
-#    username: kevinbacon
-#    password: pa55word
-    token:
-      from_secret: key
-    repo: https://hub.docker.com/r/thebrones/apachestack
-    dockerfile: Dockerfile
-    registry: github.com
-
-#- name: publish
-#  image: plugins/docker
-#  settings:
-#    repo: thebrones/apachestack
-    #tags: [ 1, 1.1, latest ]
-    
-
-#- name: notify
-#  image: plugins/slack
-#  settings:
-#    channel: developers
-#    username: drone
+# - name: docker  
+#   image: plugins/docker
+#   settings:
+#     repo: https://hub.docker.com/r/thebrones/apachestack
+#     dockerfile: Dockerfile
+#     registry: github.com
+#     tags: [ dev ]
+  - publish:
+      secrets: [ DOCKERUSERNAME, DOCKERPASSWORD ]
+      image: plugins/docker
+      repo: thebrones/apachestack
+      tags: dev
+      when:
+        branch: [ dev ]
+        event: [ push ]
