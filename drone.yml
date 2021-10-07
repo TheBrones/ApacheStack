@@ -11,7 +11,7 @@ steps:
       from_secret: DOCKERPASSWORD
     repo: thebrones/apachestack
     #auto_tag: true Not working
-    tags: 
+    tags:
     - latest
   when:
     branch: [ main ]
