@@ -15,5 +15,5 @@ steps:
     - dev
     - latest
   when:
-    branch: [ dev ]
+    branch: [ main ]
     event: [ push ]
