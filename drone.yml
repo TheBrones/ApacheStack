@@ -10,10 +10,10 @@ steps:
     password: 
       from_secret: DOCKERPASSWORD
     repo: thebrones/apachestack
-    #auto_tag: true Not working 
-    tags: 
-    - dev
-    - latest
+    auto_tag: "true"
+    #tags: 
+    #- dev
+    #- latest
   when:
     branch: [ dev ]
     event: [ push ]
