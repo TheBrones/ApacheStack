@@ -12,7 +12,6 @@ steps:
     repo: thebrones/apachestack
     #auto_tag: true Not working
     tags: 
-    - dev
     - latest
   when:
     branch: [ main ]
