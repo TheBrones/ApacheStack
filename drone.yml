@@ -14,7 +14,7 @@ steps:
     tags = [
     # - latest
      - dev
-     - ${DRONE_TAG}
+     - ${DRONE_TAG} ]
     force_tag: true
   when:
     branch: [ dev ]
