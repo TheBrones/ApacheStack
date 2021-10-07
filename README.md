@@ -24,6 +24,7 @@ port 25
 from "php@email.com"
 logfile /folder/msmtp.log
 ```
+Last update 7-10-2021
 
 # Sources
   - https://hub.docker.com/layers/php/library/php/apache/images/sha256-4807131aaf46a48c03548e4284456c08c3e0c2db40aea2299958cf54a02d1136?context=explore
