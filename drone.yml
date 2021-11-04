@@ -2,7 +2,7 @@ name: default
 kind: pipeline
 type: docker
 steps:
-- name: docker
+- name: docker-testing
   image: plugins/docker
   settings:
     username: 
@@ -10,12 +10,39 @@ steps:
     password: 
       from_secret: DOCKERPASSWORD
     repo: thebrones/apachestack
-    auto_tag: true
-    tags:
-    # - latest
-     - dev
-     - ${DRONE_TAG}
-    force_tag: true
+    #auto_tag: true Not working
+    tags: 
+    - testing
+  when:
+    branch: [ testing ]
+    cron:
+      include:
+      - weekly
+- name: docker-dev
+  image: plugins/docker
+  settings:
+    username: 
+      from_secret: DOCKERUSERNAME
+    password: 
+      from_secret: DOCKERPASSWORD
+    repo: thebrones/apachestack
+    #auto_tag: true Not working
+    tags: 
+    - dev
   when:
     branch: [ dev ]
+    event: [ push ]
+- name: docker-main
+  image: plugins/docker
+  settings:
+    username: 
+      from_secret: DOCKERUSERNAME
+    password: 
+      from_secret: DOCKERPASSWORD
+    repo: thebrones/apachestack
+    #auto_tag: true Not working
+    tags: 
+    - latest
+  when:
+    branch: [ main ]
     event: [ push ]
