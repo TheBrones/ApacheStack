@@ -32,3 +32,17 @@ steps:
   when:
     branch: [ dev ]
     event: [ push ]
+- name: docker-main
+  image: plugins/docker
+  settings:
+    username: 
+      from_secret: DOCKERUSERNAME
+    password: 
+      from_secret: DOCKERPASSWORD
+    repo: thebrones/apachestack
+    #auto_tag: true Not working
+    tags: 
+    - latest
+  when:
+    branch: [ main ]
+    event: [ push ]
