@@ -16,6 +16,9 @@ steps:
   when:
     branch: [ testing ]
     event: [ push ]
+    cron:
+      include:
+      - weekly
 - name: docker-dev
   image: plugins/docker
   settings:
