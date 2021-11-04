@@ -15,7 +15,6 @@ steps:
     - testing
   when:
     branch: [ testing ]
-    event: [ push ]
     cron:
       include:
       - weekly
