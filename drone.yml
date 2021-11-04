@@ -2,7 +2,7 @@ name: default
 kind: pipeline
 type: docker
 steps:
-- name: docker
+- name: docker-autotesting
   image: plugins/docker
   settings:
     username: 
@@ -11,7 +11,37 @@ steps:
       from_secret: DOCKERPASSWORD
     repo: thebrones/apachestack
     #auto_tag: true Not working
-    tags:
+    tags: 
+    - dev
+  when:
+    branch: [ dev ]
+    cron:
+      include:
+      - weekly
+- name: docker-dev
+  image: plugins/docker
+  settings:
+    username: 
+      from_secret: DOCKERUSERNAME
+    password: 
+      from_secret: DOCKERPASSWORD
+    repo: thebrones/apachestack
+    #auto_tag: true Not working
+    tags: 
+    - dev
+  when:
+    branch: [ dev ]
+    event: [ push ]
+- name: docker-main
+  image: plugins/docker
+  settings:
+    username: 
+      from_secret: DOCKERUSERNAME
+    password: 
+      from_secret: DOCKERPASSWORD
+    repo: thebrones/apachestack
+    #auto_tag: true Not working
+    tags: 
     - latest
   when:
     branch: [ main ]
