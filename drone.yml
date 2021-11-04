@@ -2,7 +2,21 @@ name: default
 kind: pipeline
 type: docker
 steps:
-- name: docker
+- name: docker-testing
+  image: plugins/docker
+  settings:
+    username: 
+      from_secret: DOCKERUSERNAME
+    password: 
+      from_secret: DOCKERPASSWORD
+    repo: thebrones/apachestack
+    #auto_tag: true Not working
+    tags: 
+    - testing
+  when:
+    branch: [ testing ]
+    event: [ push ]
+- name: docker-dev
   image: plugins/docker
   settings:
     username: 
@@ -13,7 +27,6 @@ steps:
     #auto_tag: true Not working
     tags: 
     - dev
-    - testing
   when:
-    branch: [ testing ]
+    branch: [ dev ]
     event: [ push ]
