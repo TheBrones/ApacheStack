@@ -24,6 +24,7 @@ port 25
 from "php@email.com"
 logfile /folder/msmtp.log
 ```
+
 Last update 13-12-2021
 
 # Sources
