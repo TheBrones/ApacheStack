@@ -5,6 +5,7 @@ Added components over PHP and Apache:
   - msmtp (for sending mail)
   - gd
   - mysqli
+  - remoteip
 
 Disabled at this time (but will work):
   - gmagick
@@ -25,9 +26,17 @@ from "php@email.com"
 logfile /folder/msmtp.log
 ```
 
-Last update 23-12-2021
+Other configuration paths to mount:
+ - /etc/apache2/apache2.conf
+ - /etc/apache2/sites-available/
+ - /usr/local/etc/php/php.ini
+You can mount these readonly if you'd like.
+
+Last update: 24-12-2021
+How van I automaticly update this image? Weekly pipeline does not seem push it to Docker Hub :/ 
 
 # Sources
-  - https://hub.docker.com/layers/php/library/php/apache/images/sha256-4807131aaf46a48c03548e4284456c08c3e0c2db40aea2299958cf54a02d1136?context=explore
+  - https://hub.docker.com/_/php
   - https://owendavies.net/articles/setting-up-msmtp/
   - https://github.com/mlocati/docker-php-extension-installer
+  - https://www.globo.tech/learning-center/x-forwarded-for-ip-apache-web-server/
