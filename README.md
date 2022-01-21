@@ -32,8 +32,8 @@ Other configuration paths to mount:
  - /usr/local/etc/php/php.ini
 You can mount these readonly if you'd like.
 
-Last update: 24-12-2021
-How van I automaticly update this image? Weekly pipeline does not seem push it to Docker Hub :/ 
+Last update: 21-01-2022
+How can I automaticly update this image? Weekly pipeline does not seem push it to Docker Hub :/ 
 
 # Sources
   - https://hub.docker.com/_/php
