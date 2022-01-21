@@ -33,7 +33,7 @@ Other configuration paths to mount:
 You can mount these readonly if you'd like.
 
 Last update: 21-01-2022
-How van I automaticly update this image? Weekly pipeline does not seem push it to Docker Hub :/ 
+How can I automaticly update this image? Weekly pipeline does not seem push it to Docker Hub :/ 
 
 # Sources
   - https://hub.docker.com/_/php
