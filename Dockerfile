@@ -1,7 +1,7 @@
 FROM php:8-apache
 
 # Add mail capability
-RUN apt-get update && apt-get install msmtp -y && \
+RUN apt-get update && apt-get upgrade -y && apt-get install msmtp -y && \
     rm -rf /var/lib/apt/lists/*
 
 # Add php modules
