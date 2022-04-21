@@ -28,7 +28,7 @@ steps:
     repo: thebrones/apachestack
     tags: 
     - dev
-    - ${DRONE_BRANCH}
+    #- ${DRONE_BRANCH}
     - ${DRONE_TAG}
   when:
     branch: [ dev ]
@@ -43,7 +43,7 @@ steps:
     repo: thebrones/apachestack
     tags:
     - latest
-    - ${DRONE_BRANCH}
+    #- ${DRONE_BRANCH}
     - ${DRONE_TAG}
   when:
     branch: [ main ]
