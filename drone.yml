@@ -26,9 +26,10 @@ steps:
     password: 
       from_secret: DOCKERPASSWORD
     repo: thebrones/apachestack
-    auto_tag: true
     tags: 
     - dev
+    - ${DRONE_BRANCH}
+    #- ${DRONE_TAG}
   when:
     branch: [ dev ]
     event: [ push ]
@@ -40,9 +41,12 @@ steps:
     password: 
       from_secret: DOCKERPASSWORD
     repo: thebrones/apachestack
-    auto_tag: true
-    tags: 
+    tags:
     - latest
+    - ${DRONE_BRANCH}
+    #- ${DRONE_TAG}
   when:
     branch: [ main ]
-    event: [ push ]
+    event: 
+    - push
+    - tag
