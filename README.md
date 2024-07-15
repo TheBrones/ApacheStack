@@ -1,6 +1,9 @@
 # Apachestack
  PHP-Apache with some mods to make a multi-puprose webserver in a single container.
 
+
+# Warning I am not updating this any more!
+
 Added components over PHP and Apache:
   - msmtp (for sending mail)
   - gd
